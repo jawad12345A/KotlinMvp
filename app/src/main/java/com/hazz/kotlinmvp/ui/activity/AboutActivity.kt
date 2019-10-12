@@ -33,7 +33,7 @@ class AboutActivity : BaseActivity() {
         relayout_gitHub.setOnClickListener {
             val uri = Uri.parse("https://github.com/git-xuhao/KotlinMvp")
             val intent = Intent(Intent.ACTION_VIEW, uri)
-            startActivity(intent)
+            startActivity(Intent.createChooser(intent, getString(R.string.select_browser)))
         }
     }
 
